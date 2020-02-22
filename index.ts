@@ -37,7 +37,7 @@ export interface Color {
 }
 
 /** Creates a Color */
-export function rgba(r: number, g: number, b: number, a: number = 255) {
+export function rgba(r: number, g: number, b: number, a: number = 255): Color {
   return { r, g, b, a }
 }
 

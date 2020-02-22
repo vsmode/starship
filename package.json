@@ -8,15 +8,17 @@
     "access": "public"
   },
   "scripts": {
-    "release": "np --tag=beta",
+    "release": "np --no-cleanup --tag=beta",
     "prerelease": "npm -s test && npm -s run build",
     "build": "rm -rf dist && tsc",
-    "test": "tsc --noEmit && echo 'Yay! 🎉'"
+    "test": "tsc --noEmit && echo 'Yay! 🎉'",
+    "docs": "typedoc --theme minimal --hideGenerator --mode library --out docs index.ts"
   },
   "author": "Josiah Savary <hello@jsavary.com>",
   "license": "MIT",
   "devDependencies": {
     "np": "^6.1.0",
+    "typedoc": "^0.17.0-3",
     "typescript": "^3.8.2"
   }
 }
