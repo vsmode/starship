@@ -12,7 +12,7 @@
     "prerelease": "npm -s test && npm -s run build",
     "build": "rm -rf dist && tsc",
     "test": "tsc --noEmit && echo 'Yay! 🎉'",
-    "docs": "typedoc --theme minimal --hideGenerator --mode library --out docs index.ts"
+    "docs": "rm -rf docs && typedoc --readme none --theme minimal --hideGenerator --mode library --out docs index.ts"
   },
   "author": "Josiah Savary <hello@jsavary.com>",
   "license": "MIT",
