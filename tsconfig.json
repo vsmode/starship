@@ -15,5 +15,5 @@
     "outDir": "dist",
     "moduleResolution": "node"
   },
-  "exclude": ["node_modules", "dist", ".cache"]
+  "exclude": ["node_modules", "dist", "docs", ".cache"]
 }
