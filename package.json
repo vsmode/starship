@@ -8,7 +8,7 @@
     "access": "public"
   },
   "scripts": {
-    "release": "np --no-cleanup --tag=beta --prerelease",
+    "release": "np --no-cleanup --tag=latest",
     "prerelease": "npm -s test && npm -s run build",
     "build": "rm -rf dist && tsc",
     "test": "tsc --noEmit && echo 'Yay! 🎉'",
