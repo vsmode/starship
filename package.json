@@ -1,6 +1,6 @@
 {
   "name": "@vsmode/starship",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple 2D game framework with no dependencies",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
