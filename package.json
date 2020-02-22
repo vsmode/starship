@@ -4,6 +4,9 @@
   "description": "Simple 2D game framework with no dependencies",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "release": "np --tag=beta",
     "prerelease": "npm -s test && npm -s run build",
