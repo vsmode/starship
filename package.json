@@ -1,11 +1,11 @@
 {
   "name": "@vsmode/starship",
   "version": "0.0.0",
-  "description": "Simple 2D game framework",
+  "description": "Simple 2D game framework with no dependencies",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "release": "np --tag=beta --contents=dist",
+    "release": "np --tag=beta",
     "prerelease": "npm -s test && npm -s run build",
     "build": "rm -rf dist && tsc",
     "test": "tsc --noEmit && echo 'Yay! 🎉'"
@@ -14,7 +14,6 @@
   "license": "MIT",
   "devDependencies": {
     "np": "^6.1.0",
-    "parcel-bundler": "^1.12.4",
     "typescript": "^3.8.2"
   }
 }
