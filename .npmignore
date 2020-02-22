@@ -1,5 +1,6 @@
 .gitignore
 node_modules
+docs
 *.png
 index.ts
 tsconfig.json
