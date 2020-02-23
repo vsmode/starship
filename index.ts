@@ -253,11 +253,11 @@ export const FONT_8x8 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAAwC
 export function clear(color: Color = BLACK) {
   const { width, height } = GFX.canvas
   GFX.clearRect(0, 0, width, height)
-  fillRect({ x: 0, y: 0, width, height }, color)
+  drawFilledRect({ x: 0, y: 0, width, height }, color)
 }
 
 /** Draws a filled rectangle */
-export function fillRect(rect: Rectangle, color: Color) {
+export function drawFilledRect(rect: Rectangle, color: Color) {
   const { x, y, width: w, height: h } = rect
   const { r, g, b, a } = color
   GFX.fillStyle = `rgba(${r},${g},${b},${a / 255})`
