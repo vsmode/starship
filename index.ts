@@ -2,21 +2,29 @@
 // Typedefs
 // -----------------------------------------------------------------------------
 
+const VECTOR2S: { [key: string]: Vector2 } = {}
+const RECTANGLES: { [key: string]: Rectangle } = {}
+const COLORS: { [key: string]: Color } = {}
+
 export interface Vector2 {
-  x: number
-  y: number
+  readonly x: number
+  readonly y: number
 }
 
 /** Creates a Vector2 */
 export function vec2(x: number, y: number): Vector2 {
-  return { x, y }
+  const key = `${x},${y}`
+  if (!VECTOR2S.hasOwnProperty(key)) {
+    VECTOR2S[key] = Object.freeze({ x, y })
+  }
+  return VECTOR2S[key]
 }
 
 export interface Rectangle {
-  x: number
-  y: number
-  width: number
-  height: number
+  readonly x: number
+  readonly y: number
+  readonly width: number
+  readonly height: number
 }
 
 /** Creates a rectangle */
@@ -26,19 +34,27 @@ export function rect(
   width: number,
   height: number,
 ): Rectangle {
-  return { x, y, width, height }
+  const key = `${x},${y},${width},${height}`
+  if (!RECTANGLES.hasOwnProperty(key)) {
+    RECTANGLES[key] = Object.freeze({ x, y, width, height })
+  }
+  return RECTANGLES[key]
 }
 
 export interface Color {
-  r: number
-  g: number
-  b: number
-  a: number
+  readonly r: number
+  readonly g: number
+  readonly b: number
+  readonly a: number
 }
 
 /** Creates a Color */
 export function rgba(r: number, g: number, b: number, a: number = 255): Color {
-  return { r, g, b, a }
+  const key = `${r},${b},${b},${a}`
+  if (!COLORS.hasOwnProperty(key)) {
+    COLORS[key] = Object.freeze({ r, g, b, a })
+  }
+  return COLORS[key]
 }
 
 // -----------------------------------------------------------------------------
