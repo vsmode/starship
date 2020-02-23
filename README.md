@@ -1,6 +1,6 @@
 # 🚀 Starship
 
-<img src="https://raster.shields.io/npm/v/@vsmode/starship?style=for-the-badge" />
+[![npm shield](https://raster.shields.io/npm/v/@vsmode/starship?style=for-the-badge)](https://www.npmjs.com/package/@vsmode/starship)
 
 Simple 2D game framework with no dependencies
 
